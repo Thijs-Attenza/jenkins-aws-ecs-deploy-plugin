@@ -1,6 +1,9 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
 
+    <f:entry title="${%DeployStrategy}" field="deployStrategy">
+        <f:select default="" />
+    </f:entry>
     <f:entry title="${%ClusterArn}: " field="clusterArn">
         <f:textbox />
     </f:entry>
@@ -14,11 +17,11 @@
         <f:textbox />
     </f:entry>
     <f:advanced>
-        <f:entry title="${%AssumeRole}" field="assumeRole"
+        <f:entry title="${%AssumeRole}: " field="assumeRole"
                  description="${%AssumeRoleDescr}">
             <f:textbox />
         </f:entry>
-        <f:entry title="${%Repository}" field="repository"
+        <f:entry title="${%Repository}: " field="repository"
                  description="${%RepositoryDescr}">
             <f:textbox />
         </f:entry>
